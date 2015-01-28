@@ -74,6 +74,7 @@ int fs_mgr_do_mount_one(struct fstab_rec *rec);
 int fs_mgr_do_tmpfs_mount(const char *n_name);
 int fs_mgr_unmount_all(struct fstab *fstab);
 struct fstab_rec const* fs_mgr_get_crypt_entry(struct fstab const* fstab);
+struct fstab_rec *fs_mgr_get_entry_for_mount_point_after(struct fstab_rec *start_rec, struct fstab *fstab, const char *path);
 void fs_mgr_get_crypt_info(struct fstab* fstab, char* key_loc, char* real_blk_device, size_t size);
 bool fs_mgr_load_verity_state(int* mode);
 bool fs_mgr_update_verity_state(fs_mgr_verity_state_callback callback);
